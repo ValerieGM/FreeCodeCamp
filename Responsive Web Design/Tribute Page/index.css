@@ -1,0 +1,16 @@
+html {
+	font-size: 20px;
+}
+
+body{
+	text-align: center;
+	color: #eee;
+	background-color: #000000;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}

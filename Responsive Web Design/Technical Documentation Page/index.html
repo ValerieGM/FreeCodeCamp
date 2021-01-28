@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/cssfamily=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Technical Documentation</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <header id="navtitle">
+                <img src="https://img.pngio.com/logos-and-graphics-nodejs-nodejs-png-1843_1129.png">
+            </header>
+        </div>
+        <ul>
+            <li><a class="nav-link" href="#Home">Home</a></li>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#Environmental_Setup">Environmental Setup</a></li>
+            <li><a class="nav-link" href="#First_Application">First Application</a></li>
+            <li><a class="nav-link" href="#REPL_Terminal">REPL Terminal</a></li>
+
+            <li><a class="nav-link" href="#Package_Manager">Package Manager</a></li>
+            <li><a class="nav-link" href="#Callbacks_Concept">Callbacks Concept</a></li>
+            <li><a class="nav-link" href="#Event_Loop">Event Loop</a></li>
+            <li><a class="nav-link" href="#Event_Emitter">Event Emitter</a></li>
+            <li><a class="nav-link" href="#Buffers">Buffers</a></li>
+            <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+
+            <!--           <li><a class="nav-link" href="#Streams">Streams</a></li>
+          <li><a class="nav-link" href="#File_System">File System</a></li>
+          <li><a class="nav-link" href="#Global_Objects">Global Objects</a></li>
+          <li><a class="nav-link" href="#Utility_Modules">Utility Modules</a></li>
+          <li><a class="nav-link" href="#Web_Module">Web Module</a></li>
+          
+          <li><a class="nav-link" href="#Express_Framework">Express Framework</a></li>
+          <li><a class="nav-link" href="#RESTFul_API">RESTFul API</a></li>
+          <li><a class="nav-link" href="#Scaling_Application">Scaling Application</a></li>
+          <li><a class="nav-link" href="#Packaging">Packaging</a></li> -->
+        </ul>
+    </nav>
+    <main id="main-doc">
+
+        <section class="main-section" id="Home">
+            <header>Home</header>
+            <article>
+                <p>
+                    Node.js is a very powerful JavaScript-based platform built on
+                    Google Chrome's JavaScript V8 Engine. It is used to develop I/O
+                    intensive web applications like video streaming sites, single-page
+                    applications, and other web applications. Node.js is open source,
+                    completely free, and used by thousands of developers around the
+                    world.
+                </p>
+
+                <p>
+                    This tutorial is designed for software programmers who want to learn
+                    the basics of Node.js and its architectural concepts. This tutorial
+                    will give you enough understanding on all the necessary components of
+                    Node.js with suitable examples.
+                </p>
+
+                <p>
+                    Before proceeding with this tutorial, you should have a basic
+                    understanding of JavaScript. As we are going to develop web-based
+                    applications using Node.js, it will be good if you have some
+                    understanding of other web technologies such as HTML, CSS, AJAX, etc.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    The definition of Node.js as supplied by its official documentation is as follows:
+                </p>
+                <ul>
+                    <li>
+                        Node.js is a platform built on Chrome's JavaScript runtime for easily
+                        building fast and scalable network applications. Node.js uses an event-
+                        driven, non-blocking I/O model that makes it lightweight and efficient,
+                        perfect for data-intensive real-time applications that run across
+                        distributed devices.
+                    </li>
+                </ul>
+                <h4>Features of Node.js</h4>
+                <p>Following are some of the important features that make Node.js the first
+                    choice of software architects.</p>
+                <ul>
+                    <li>
+                        <strong>Asynchronous and Event Driven −</strong> All APIs of Node.js
+                        library are asynchronous, that is, non-blocking. It essentially means a
+                        Node.js based server never waits for an API to return data. The server
+                        moves to the next API after calling it and a notification mechanism of
+                        Events of Node.js helps the server to get a response from the previous
+                        API call.
+                    </li>
+
+                    <li>
+                        <strong>Very Fast −</strong> Being built on Google Chrome's V8
+                        JavaScript Engine, Node.js library is very fast in code execution.
+                    </li>
+
+                    <li>
+                        <strong>Single Threaded but Highly Scalable −</strong> Node.js uses a
+                        single threaded model with event looping. Event mechanism helps the
+                        server to respond in a non-blocking way and makes the server highly
+                        scalable as opposed to traditional servers which create limited threads
+                        to handle requests. Node.js uses a single threaded program and the same
+                        program can provide service to a much larger number of requests than
+                        traditional servers like Apache HTTP Server.
+                    </li>
+
+                    <li>
+                        <strong>No Buffering − </strong>Node.js applications never buffer any
+                        data. These applications simply output the data in chunks.
+                    </li>
+
+                    <li>
+                        <strong>License − Node.js </strong> is released under the MIT license.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section class="main-section" id="Environmental_Setup">
+            <header>Environmental Setup</header>
+            <article>
+                <p>
+                    Please go to <a
+                        href="https://www.tutorialspoint.com/nodejs/nodejs_environment_setup.htm">Tutorialspoint</a> for
+                    further instructions.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="First_Application">
+            <header>First Application</header>
+            <article>
+                <p>
+                    Before creating an actual "Hello, World!" application using Node.js, let
+                    us see the components of a Node.js application. A Node.js application
+                    consists of the following three important components −
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Import required modules − </strong>We use the require directive
+                        to load Node.js modules.
+                    </li>
+                    <li>
+                        <strong>Create server − </strong>A server which will listen to client's
+                        requests similar to Apache HTTP Server.
+                    </li>
+                    <li>
+                        <strong>Read request and return response − </strong>The server created
+                        in an earlier step will read the HTTP request made by the client which
+                        can be a browser or a console and return the response.
+                    </li>
+                </ul>
+
+                <h4>Creating Node.js Application</h4>
+                <p>
+                    We use the require directive to load the http module and store the
+                    returned HTTP instance into an http variable as follows:
+                    <code>var http = require("http");</code></br> Step 2 - Create Server
+                    </br></br> We use the created http instance and call http.createServer() method to
+                    create a server instance and then we bind it at port 8081 using the listen
+                    method associated with the server instance. Pass it a function with parameters
+                    request and response. Write the sample implementation to always return "Hello
+                    World".
+                    <code>http.createServer(function (request, response) {
+        // Send the HTTP header
+        // HTTP Status: 200 : OK
+        // Content Type: text/plain
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        
+        // Send the response body as "Hello World"
+        response.end('Hello World\n');
+        }).listen(8081);
+        // Console will print the message
+        console.log('Server running at http://127.0.0.1:8081/');</code>
+                    The above code is enough to create an HTTP server which listens, i.e., waits for
+                    a request over 8081 port on the local machine.<br></br>Step 3 - Testing Request &
+                    Response</br></br>Let's put step 1 and 2 together in a file called main.js and
+                    start our HTTP server as shown below:
+                    <code>
+  var http = require("http");
+
+http.createServer(function (request, response) {
+   // Send the HTTP header 
+   // HTTP Status: 200 : OK
+   // Content Type: text/plain
+   response.writeHead(200, {'Content-Type': 'text/plain'});
+   
+   // Send the response body as "Hello World"
+   response.end('Hello World\n');
+}).listen(8081);
+
+// Console will print the message
+console.log('Server running at http://127.0.0.1:8081/');
+</code> Now execute the main.js to start the server as follows:
+                    <code>$ node main.js</code>Verify the Output. Server has started.
+                    <code>Server running at http://127.0.0.1:8081/</code>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="REPL_Terminal">
+            <header>REPL Terminal</header>
+            <article>
+                <p>
+                    REPL stands for Read Eval Print Loop and it represents a computer
+                    environment like a Windows console or Unix/Linux shell where a command is
+                    entered and the system responds with an output in an interactive mode.
+                    Node.js or Node comes bundled with a REPL environment. It performs the
+                    following tasks:
+
+                <ul>
+                    <li><strong>Read −</strong> Reads user's input, parses the input into
+                        JavaScript data-structure, and stores in memory.</li>
+                    <li><strong>Eval −</strong> Takes and evaluates the data structure.</li>
+                    <li><strong>Print −</strong> Prints the result.</li>
+                    <li><strong>Loop −</strong> Loops the above command until the user
+                        presses ctrl-c twice.</li>
+                </ul>
+                </p>
+                <p>The REPL feature of Node is very useful in experimenting with Node.js
+                    codes and to debug JavaScript codes.</br></br>
+                    REPL can be started by simply running node on shell/console without any
+                    arguments as follows. <code>$ node</code> You will see the REPL Command
+                    prompt > where you can type any Node.js command: <code>$ node
+></code> Let's try a simple mathematics at the Node.js REPL command prompt:
+                    <code>$ node
+> 1 + 3
+4
+> 1 + ( 2 * 3 ) - 4
+ 3
+></code>
+                    You can make use variables to store values and print later like any
+                    conventional script. If var keyword is not used, then the value is stored in
+                    the variable and printed. Whereas if <strong>var</strong> keyword is used,
+                    then the value is stored but not printed. You can print variables using
+                    <strong>console.log()</strong>. <code>$ node
+> x = 10
+10
+> var y = 10
+undefined
+> x + y
+20
+> console.log("Hello World")
+Hello World
+undefined</code>
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Package_Manager">
+            <header>Package Manager</header>
+            <article>
+                <p>
+                    Node Package Manager (NPM) provides two main functionalities
+                </p>
+
+                <ul>
+                    <li>Online repositories for node.js packages/modules which are searchable
+                        on search.nodejs.org</li>
+                    <li>Command line utility to install Node.js packages, do version
+                        management and dependency management of Node.js packages.</li>
+                </ul>
+
+                <p>
+                    NPM comes bundled with Node.js installables after v0.6.3 version. To
+                    verify the same, open console and type the following command and see the
+                    result:
+                    <code>$ npm --version
+2.7.1</code>
+                </p>
+
+                <p>
+                    If you are running an old version of NPM then it is quite easy to update
+                    it to the latest version. Just use the following command from root:
+                    <code>$ sudo npm install npm -g
+/usr/bin/npm -> /usr/lib/node_modules/npm/bin/npm-cli.js
+npm@2.7.1 /usr/lib/node_modules/npm</code>
+                </p>
+
+                <h4>Installing Modules using NPM</h4>
+                <p>There is a simple syntax to install any Node.js module:
+                    <code>$ npm install &ltModule Name> </code>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Callbacks_Concept">
+            <header>Callbacks Concept</header>
+            <article>
+                <h4>What is Callback?</h4>
+
+                <p>
+                    Callback is an asynchronous equivalent for a function. A callback function
+                    is called at the completion of a given task. Node makes heavy use of
+                    callbacks. All the APIs of Node are written in such a way that they support
+                    callbacks.
+                    </br></br>
+                    For example, a function to read a file may start reading file and return
+                    the control to the execution environment immediately so that the next
+                    instruction can be executed. Once file I/O is complete, it will call the
+                    callback function while passing the callback function, the content of the
+                    file as a parameter. So there is no blocking or wait for File I/O. This
+                    makes Node.js highly scalable, as it can process a high number of requests
+                    without waiting for any function to return results.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Event_Loop">
+            <header>Event Loop</header>
+            <article>
+                <p>
+                    Node.js is a single-threaded application, but it can support concurrency
+                    via the concept of event and callbacks. Every API of Node.js is
+                    asynchronous and being single-threaded, they use async function calls to
+                    maintain concurrency. Node uses observer pattern. Node thread keeps an
+                    event loop and whenever a task gets completed, it fires the corresponding
+                    event which signals the event-listener function to execute.
+                </p>
+
+                <h4>Event-Driven Programming</h4>
+                <p>
+                    Node.js uses events heavily and it is also one of the reasons why Node.js
+                    is pretty fast compared to other similar technologies. As soon as Node
+                    starts its server, it simply initiates its variables, declares functions
+                    and then simply waits for the event to occur.
+                    </br></br> In an event-driven application, there is generally a main loop that listens for events,
+                    and then triggers a callback function when one of
+                    those events is detected.</br></br>Although events look quite similar to callbacks, the difference
+                    lies in the fact that callback functions are called when an asynchronous function returns its
+                    result, whereas event handling works on the observer pattern. The functions that listen to events
+                    act as Observers. Whenever an event gets fired, its listener function starts executing. Node.js has
+                    multiple in-built events available through events module and EventEmitter class which are used to
+                    bind events and event-listeners as follows: <code>// Import events module
+var events = require('events');
+
+// Create an eventEmitter object
+var eventEmitter = new events.EventEmitter();</code> Following is the syntax to bind an event handler with an event:
+                    <code>// Bind event and event  handler as follows
+eventEmitter.on('eventName', eventHandler);</code> We can fire an event programmatically as follows: <code>// Fire an event 
+eventEmitter.emit('eventName');</code>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Event_Emitter">
+            <header>Event Emitter</header>
+            <article>
+                <p>
+                    Many objects in a Node emit events, for example, a net.Server emits an
+                    event each time a peer connects to it, an fs.readStream emits an event
+                    when the file is opened. All objects which emit events are the instances
+                    of events.EventEmitter.
+                </p>
+
+                <h4>EventEmitter Class</h4>
+
+                <p>
+                    As we have seen in the previous section, EventEmitter class lies in the
+                    events module. It is accessible via the following code: <code>// Import events module
+var events = require('events');
+
+// Create an eventEmitter object
+var eventEmitter = new events.EventEmitter();</code> When an EventEmitter instance faces any error, it emits an 'error'
+                    event. When a new listener is added, 'newListener' event is fired and when a listener is removed,
+                    'removeListener' event is fired. </br></br> EventEmitter provides multiple properties like on and
+                    emit. on property is used to bind a function with the event and emit is used to fire an event.
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="Buffers">
+            <header>Buffers</header>
+            <article>
+                <p>
+                    Pure JavaScript is Unicode friendly, but it is not so for binary data.
+                    While dealing with TCP streams or the file system, it's necessary to
+                    handle octet streams. Node provides Buffer class which provides instances
+                    to store raw data similar to an array of integers but corresponds to a
+                    raw memory allocation outside the V8 heap.
+                    Buffer class is a global class that can be accessed in an application
+                    without importing the buffer module.
+                </p>
+
+                <h4>Creating Buffers</h4>
+
+                <p>
+                    Node Buffer can be constructed in a variety of ways.
+                </p>
+
+                <h5>Method 1</h5>
+                <p>
+                    Following is the syntax to create an uninitiated Buffer of 10 octets:
+                    <code>var buf = new Buffer(10);</code>
+                </p>
+
+                <h5>Method 2</h5>
+                <p>
+                    Following is the syntax to create a Buffer from a given array:
+                    <code>var buf = new Buffer([10, 20, 30, 40, 50]);</code>
+                </p>
+
+                <h5>Method 3</h5>
+                <p>
+                    Following is the syntax to create a Buffer from a given string and
+                    optionally encoding type: <code>var buf = new Buffer("Simply Easy Learning", "utf-8");</code> Though
+                    "utf8" is the default encoding, you can use any of the following encodings "ascii", "utf8",
+                    "utf16le", "ucs2", "base64" or "hex".
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Conclusion">
+            <header>Conclusion</header>
+            <article>
+                <p>
+                    This is simply a very brief summary on Node.js for the purposes of this exercise. It is nowhere near
+                    the full tutorial which can be found on <a
+                        href="https://www.tutorialspoint.com/nodejs/">Tutorialspoint</a>.
+                </p>
+            </article>
+        </section>
+
+        <!--       <section class="main-section" id="Streams">
+        <header>Streams</header>
+        <article></article>
+      </section>
+      <section class="main-section" id="File_System">
+        <header>File System</header>
+        <article></article>
+      </section>
+      <section class="main-section" id="Global_Objects">
+        <header>Global Objects</header>
+        <article></article>
+      </section>
+      <section class="main-section" id="Utility_Modules">
+        <header>Utility Modules</header>
+        <article></article>
+      </section>
+      <section class="main-section" id="Web_Module">
+        <header>Web Module</header>
+        <article></article>
+      </section>
+      
+      <section class="main-section" id="Express_Framework">
+        <header>Express Framework</header>
+        <article></article>
+      </section>
+      <section class="main-section" id="RESTFul_API">
+        <header>RESTFul API</header>
+        <article></article>
+      </section>
+      <section class="main-section" id="Scaling_Application">
+        <header>Scaling Application</header>
+        <article></article>
+      </section>
+      <section class="main-section" id="Packaging">
+        <header>Packaging</header>
+        <article></article>
+      </section> -->
+
+    </main>
+</body>
+</html>

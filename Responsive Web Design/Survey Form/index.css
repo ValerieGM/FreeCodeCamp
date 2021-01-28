@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html, body {
+background-image: url('https://i.pinimg.com/736x/e6/d9/09/e6d909d8fc1c9df6535571f933c1b6a4.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+color: silver; !important
+}
+
+.container {
+  height: 100%;
+align-content: center;
+}
+
+
+.card{
+height: 660x;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+color: silver; !important
+}
+
+.card-header{
+text-align: center;
+}

@@ -1,0 +1,64 @@
+  
+html, body {
+    height: 100%;
+  background: url("https://i.pinimg.com/originals/2a/9c/a0/2a9ca0eaadcec654fd763f053476ef28.jpg") no-repeat;
+  background-size: cover;
+  color: #8B0000;
+}
+
+header {
+  position: fixed;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+@media (max-width: 100px) {
+  .logo img {
+    width: 50px;
+    height: auto;
+  }
+}
+
+h5, h3 {
+  color: #D3D3D3;
+}
+
+#main {
+  position: relative;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#email-sect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 50px;
+}
+
+#demo {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+footer a {
+    color: #D3D3D3;
+    font-size: 1em;
+    text-decoration: none;
+    margin-right: 20px;
+}

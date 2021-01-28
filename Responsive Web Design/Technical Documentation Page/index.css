@@ -1,0 +1,92 @@
+html, body {
+    background: url("https://images.freecreatives.com/wp-content/uploads/2015/04/black-wood.png");
+    color: #C0C0C0;
+    height: 100%;
+  }
+  
+  #navbar {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    border-right: solid;
+    border-color: #C0C0C0;
+  }
+  
+  .logo {
+    display: block;
+    text-align: center;
+  }
+  
+  #navbar img {
+    width: 80px;
+    height: auto;
+  }
+  
+  #navbar ul {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  #navbar li {
+    width: 100%;
+    color: #C0C0C0;
+    positon: relative;
+    border-bottom: 1px solid;
+  }
+  
+  #navbar a {
+    color: #C0C0C0;
+  }
+  
+  header {
+    color: #5fa052;
+    margin: auto;
+    padding: 5px;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
+  #main-doc {
+      position: absolute;
+      margin-left: 25%;
+  }
+  
+  p, li, h4, h5 {
+    color: #C0C0C0;
+  }
+  
+  code {
+    display: block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgba(232, 236, 241, 0.2);
+    border-radius: 5px;
+  }
+  
+  @media only screen and (max-width: 800px){
+    #navbar {
+      position: absolute;
+      width: 100%;
+      max-height: 200px;
+      border: none;
+      border-bottom: 2px solid;
+      top: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+    }
+    
+    #navbar ul {
+      border: 1px solid;
+      height: 200px;
+    }
+    
+    #main-doc {
+      position: relative;
+      margin-left: 0px;
+      margin-top: 300px;
+    }
+  }
