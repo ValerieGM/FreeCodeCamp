@@ -1,0 +1,9 @@
+[submodule "Front End Libraries/React-Calculator"]
+	path = Front End Libraries/React-Calculator
+	url = https://github.com/ValerieGM/React-Calculator.git
+[submodule "Front End Libraries/React-Markdown-Previewer"]
+	path = Front End Libraries/React-Markdown-Previewer
+	url = https://github.com/ValerieGM/React-Markdown-Previewer.git
+[submodule "Front End Libraries/React-Drum-Machine"]
+	path = Front End Libraries/React-Drum-Machine
+	url = https://github.com/ValerieGM/React-Drum-Machine.git
