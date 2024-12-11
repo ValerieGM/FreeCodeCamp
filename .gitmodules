@@ -10,3 +10,6 @@
 [submodule "Front End Libraries/25+5-Clock"]
 	path = Front End Libraries/25+5-Clock
 	url = https://github.com/ValerieGM/25-Clock.git
+[submodule "Back End Development and APIs/Timestamp-Microservice"]
+	path = Back End Development and APIs/Timestamp-Microservice
+	url = https://github.com/ValerieGM/Timestamp-Microservice.git
