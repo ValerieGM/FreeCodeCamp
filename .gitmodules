@@ -19,3 +19,6 @@
 [submodule "Back End Development and APIs/URL-Shortener-Microservice"]
 	path = Back End Development and APIs/URL-Shortener-Microservice
 	url = https://github.com/ValerieGM/URL-Shortener-Microservice.git
+[submodule "Back End Development and APIs/File-Metadata-Microservice"]
+	path = Back End Development and APIs/File-Metadata-Microservice
+	url = https://github.com/ValerieGM/File-Metadata-Microservice.git
