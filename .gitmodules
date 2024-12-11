@@ -16,3 +16,6 @@
 [submodule "Back End Development and APIs/Request-Header-Parser-Microservice"]
 	path = Back End Development and APIs/Request-Header-Parser-Microservice
 	url = https://github.com/ValerieGM/Request-Header-Parser-Microservice.git
+[submodule "Back End Development and APIs/URL-Shortener-Microservice"]
+	path = Back End Development and APIs/URL-Shortener-Microservice
+	url = https://github.com/ValerieGM/URL-Shortener-Microservice.git
